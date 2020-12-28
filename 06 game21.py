@@ -11,10 +11,7 @@ while a1 == False and c1 == False or b1 == False and c1 == False or b1 == False 
             a2 = int(input("желает ли игрок a взять карту"))
             if a2 == 1:
                  a = a + random.randint(2, 11)
-                 print (a2)
                  print ("ок, теперь ход игрока b")
-            elif a > 21:
-                 print ("игрок выбывает")
             elif a2 ==2:
                  print ("ок, теперь ход игрока b")
                  a1 = True
@@ -29,10 +26,7 @@ while a1 == False and c1 == False or b1 == False and c1 == False or b1 == False 
         if b2 == 1:
 
              b = b + random.randint(2, 11)
-             print (a2)
              print ("ок, теперь ход игрока с")
-        elif a > 21:
-                 print ("игрок выбывает")
         elif b2 ==2:
                 print ("ок, теперь ход игрока с")
                 b1 = True
