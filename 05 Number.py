@@ -6,13 +6,16 @@ while i != True :
     if num == op :
         print ("хе-хе, неплохо")
         i = True
-    elif num < op :
+    elif num < op <= 100:
         print ("перебор")
     elif op == 0:
         print ("жаль что ты не смог угадать. я загадывал число", num)
         i = True
 
-    else :
+    elif num > op >=1 :
         print ("маловато")
+    else:
+        print ("Что в фразе 'от 1 до 100' было непонятно?")
+
 
 print ("ну вот и конец")
