@@ -3,7 +3,7 @@ from random import randint as rid
 
 pg.init()
 
-gamedisplay = pg.display.set_mode((500, 500)) # назначение размера окна с игрой
+gamedisplay = pg.display.set_mode((500, 500)) 
 gamedisplay.fill((0, 0, 0))
 
 def rand_color():
@@ -21,28 +21,28 @@ radius = 9
 
 game = True
 while game:
-    # получение событий
+
     events = pg.event.get()
-    # проверка события на команду закрытия программы
+
     for g in events:
-        if g.type == pg.QUIT: # обработка события закрытия
+        if g.type == pg.QUIT:
             game = False
 
-        if g.type == pg.KEYDOWN: # рандомный цвет
+        if g.type == pg.KEYDOWN:
             if g.key == pg.K_SPACE:
                 color = rand_color()
 
-        if g.type == pg.MOUSEBUTTONDOWN: # размер
-            if g.button == 4:  # колёсико вверх
+        if g.type == pg.MOUSEBUTTONDOWN:
+            if g.button == 4:
                 radius += 1
-            if g.button == 5:  # колёсико вниз
+            if g.button == 5:
                 radius -= 1
 
 
-    if pg.mouse.get_pressed()[2]: # ластик
+    if pg.mouse.get_pressed()[2]:
         color = (0, 0, 0)
 
-    if pg.mouse.get_pressed()[0]: # рисование
+    if pg.mouse.get_pressed()[0]:
         mouse_pl = pg.mouse.get_pos()
         pg.draw.circle(gamedisplay, color, mouse_pl, radius)
 
